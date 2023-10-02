@@ -1,2 +1,2 @@
 #!/bin/bash
-[ -e "iacta" ] && awk 'NR==3 {print; exit}' iacta
+head -n 3 iact | tail -n 1
