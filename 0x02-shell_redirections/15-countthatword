@@ -1,2 +1,2 @@
 #!/bin.bash
-grep -c "bin" /etc/passwd 2>/dev/null
+grep -c "bin" /etc/passwd || echo "The file /etc/passwd does not exist."
