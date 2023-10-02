@@ -1,2 +1,2 @@
 #!/bin/bash
-(find . -mindepth 2 -type d -not -path "./.*" -not -path "../.*")
+find . -type d ! -path . | wc -l
