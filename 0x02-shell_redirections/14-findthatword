@@ -1,0 +1,3 @@
+#!/bin/bash
+if [ -e "/etc/passwd" ]; then grep "root" /etc/passwd; else echo "File /etc/passwd not found."; fi
+
