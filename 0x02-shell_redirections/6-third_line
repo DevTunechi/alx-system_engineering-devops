@@ -1,2 +1,2 @@
 #!/bin/bash
-head -u 3 iacta | tail -n 1
+third_line=$(tail -n 3 iacta | head -n 1)
