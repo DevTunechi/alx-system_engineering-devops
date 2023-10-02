@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(head -n 1 <<< $(tail -n 3 iacta))"
+[ -e "iacta" ] && awk 'NR==3 {print; exit}' iacta
