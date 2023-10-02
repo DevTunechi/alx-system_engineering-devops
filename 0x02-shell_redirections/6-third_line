@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(tail -n 1 <<< $(head -n 3 iacta))"
+echo "$(head -n 1 <<< $(tail -n 3 iacta))"
