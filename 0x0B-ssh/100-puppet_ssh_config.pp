@@ -1,17 +1,17 @@
-file { '/home/your_username/.ssh':
+file { '/home/root/.ssh':
   ensure => directory,
   owner  => 'root',
   group  => 'root',
   mode   => '0700',
 }
 
-file { '/home/your_username/.ssh/config':
+file { '/home/root/.ssh/config':
   ensure  => file,
   owner   => 'root',
   group   => 'root',
   mode    => '0600',
   content => "\
-Host 34.232.55.92 
+Host 54.210.122.29 
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
 ",
