@@ -1,7 +1,7 @@
 # SSH Config File
 #
-Host web-01
+Host 28aaa0f33eca 
 	Hostname 54.210.122.29 
-	User ubuntu
+	User Tunechi
 	PasswordAuthentication no
 	IdentityFile ~/.ssh/school
