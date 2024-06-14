@@ -1,12 +1,12 @@
 # Nginx configuration Puppet manifest
 
 class nginx_tuning {
-  
+
   # Ensure Nginx package is installed
   package { 'nginx':
-    ensure => installed,
+    ensure => present,
   }
-  
+
   # Ensure the Nginx service is enabled and running
   service { 'nginx':
     ensure     => running,
@@ -14,7 +14,7 @@ class nginx_tuning {
     subscribe  => File['/etc/nginx/nginx.conf'],
   }
 
-  # Configure Nginx
+  # Configure Nginx main configuration file
   file { '/etc/nginx/nginx.conf':
     ensure  => file,
     content => template('nginx/nginx.conf.erb'),
@@ -22,7 +22,7 @@ class nginx_tuning {
     notify  => Service['nginx'],
   }
 
-  # Create a template for the nginx.conf file
+  # Configure additional worker connections
   file { '/etc/nginx/conf.d/worker_connections.conf':
     ensure  => file,
     content => template('nginx/worker_connections.conf.erb'),
